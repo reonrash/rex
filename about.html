@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Leon</title>
+      <link rel="stylesheet" href="about.css">
+      <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+      <script src="blotter.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+      <script>
+    document.addEventListener("touchstart", function() {},false);
+    </script>
+     
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+                <nav>
+                    <input type="checkbox" id="nav" class="hidden">
+                    <label for="nav" class="nav-btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                    </label>
+                    <div class="logo">
+                            <a href="#"><span class="logotext">REX</span></a>
+                    </div>
+                    <div class="nav-wrapper">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Resume</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                    </div>
+                </nav>
+        </div>
+        
+
+        
+        <div class = "buttle" id = "now2">
+            INTERESTS →
+        </div>
+        
+        <div class = "gridcontainer">
+            <div class="introduction">
+                <ul class= "intro">
+                    <li>Majoring in CS and minoring in Studio Art, Statistics @UNC</li>
+                    <li>Living in North Carolina now</li>
+                    <li>Currently up to no good</li>
+                </ul>
+            
+            </div>
+            <div class="art card"> <div class="overlay1"></div><span class= "title">Soccer</span><span class= "description">
+                For better or worse, I play soccer almost everyday. Not only is it exhilarating, but you get to meet new diverse people everyday.
+            </span></div>
+
+            <div class="cs card"> <div class="overlay"></div><span class= "title">Comp Sci</span><span class= "description">
+                Computer Science, to me, is the crossroads of math, art, & programming. And all I wanna do is make something cool.
+            </span></div>
+                
+            <div class="soccer card"> <div class="overlay"></div><span class= "title">Art</span><span class= "description">
+                Art is something I like to explore physically, digitally, and in history.
+            </span></div>
+        </div>
+
+
+        
+
+       
+        
+
+
+        
+
+        <div class="media">
+            <ul>
+                <li><ion-icon name="logo-facebook"></ion-icon></li>
+                <li><ion-icon name="logo-instagram"></ion-icon></li>
+                <li><ion-icon name="logo-twitter"></ion-icon></li>
+                <li><ion-icon name="logo-youtube"></ion-icon></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+           
+            TweenMax.staggerFrom(".contacts ul li", 2, {
+            x: -80,
+            opacity: 0,
+            ease: Expo.easeInOut
+      }, 0.1);
+           
+           
+            TweenMax.from(".logo", 3, {
+            delay: 1.6,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut
+            });
+            TweenMax.staggerFrom("nav ul li", 2, {
+            delay: 1.6,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut
+      }, 0.1);
+        
+            TweenMax.staggerFrom(".media ul li", 3, {
+            delay: 2,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut
+      }, 0.1);
+            TweenMax.from(".but", 1, {
+          
+            
+            opacity: 0,
+            ease: Expo.easeInOut
+            });
+            TweenMax.staggerFrom(".introduction ul li", 3, {
+            delay: 2,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut
+      }, 0.1);
+            
+            TweenMax.from(".art", 3, {
+          
+            
+            opacity: 0,
+            ease: Expo.easeInOut
+            });
+            TweenMax.from(".cs", 3, {
+            
+            
+            opacity: 0,
+            ease: Expo.easeInOut
+            });
+            TweenMax.from(".soccer", 3, {
+            
+            
+            opacity: 0,
+            ease: Expo.easeInOut
+            });
+
+
+
+
+       
+        function setup_for_width(mql) {
+            if (mql.matches) {
+                    document.getElementById("now2").firstChild.nodeValue = "BIO →";
+            } else {
+                    document.getElementById("now2").firstChild.nodeValue = "↓ BIO";
+            }
+        }
+
+            var width_mql = window.matchMedia("(min-width: 900px)");
+            // Add a listener for when the result changes
+            width_mql.addListener(setup_for_width);
+            // And share the same code to set things up with our current state.
+            setup_for_width(width_mql);
+
+            
+
+         
+    </script>
+    
+</body>
+</html>

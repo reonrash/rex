@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Leon</title>
+      <link rel="stylesheet" href="master.css">
+      <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+      <script src="blotter.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+      <script>
+    document.addEventListener("touchstart", function() {},false);
+    </script>
+     
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+                <nav>
+                    <input type="checkbox" id="nav" class="hidden">
+                    <label for="nav" class="nav-btn">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                    </label>
+                    <div class="logo">
+                            <a href="#"><span class="logotext">REX</a>
+                    </div>
+                    <div class="nav-wrapper">
+                            <ul>
+                                <li><a href="titlescreen.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Resume</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                    </div>
+                </nav>
+        </div>
+        
+
+    <div class = "outer">
+        <div class="circle-1 circle"></div>
+        <div class="circle-2 circle"></div>
+        <div class="circle-3 circle"></div>
+    </div>
+        
+
+        <div class="name">
+            <ul> 
+                <li>// I</li>
+                <li>// Am </li>
+                <li>// Leon </li>
+            
+            </ul>
+  
+
+        <a href= "#"><span><button>Learn More</button></span></a>
+       
+        </div>
+        
+
+        <div class="runner">
+            <img src="nes.png" alt="">
+        </div>
+
+        
+
+        
+
+        <div class="media">
+            <ul>
+                <li><ion-icon name="logo-facebook"></ion-icon></li>
+                <li><ion-icon name="logo-instagram"></ion-icon></li>
+                <li><ion-icon name="logo-twitter"></ion-icon></li>
+                <li><ion-icon name="logo-youtube"></ion-icon></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+            TweenMax.staggerFrom(".name ul li", 2, {
+            x: -80,
+            opacity: 0,
+            ease: Expo.easeInOut
+      }, 0.1);
+           
+            TweenMax.from(".runner img", 4, {
+            delay: 1.8,
+            y: 200,
+            opacity: 0,
+            ease: Expo.easeInOut
+            });
+            TweenMax.from(".circle-1", 3, {
+            delay: 1,
+            rotation: 200,
+            transformOrigin: "50% 50%",
+            opacity: 0,
+            x: 180,
+            ease: Expo.easeInOut
+            });
+            TweenMax.from(".circle-2", 3, {
+            delay: 1.2,
+            rotation: 90,
+            transformOrigin: "50% 50%",
+            opacity: 0,
+            x: -180,
+            ease: Expo.easeInOut
+            });
+            TweenMax.from(".circle-3", 3, {
+            delay: 1.4,
+            rotation: 180,
+            transformOrigin: "50% 50%",
+            opacity: 0,
+            x: 180,
+            ease: Expo.easeInOut
+            });
+           
+            TweenMax.from(".logo", 4, {
+            delay: 1.6,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut
+            });
+            TweenMax.staggerFrom("nav ul li", 5, {
+            delay: 1.6,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut
+      }, 0.1);
+        
+            TweenMax.staggerFrom(".media ul li", 5, {
+            delay: 2,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut
+      }, 0.1);
+
+            TweenMax.from("button", 2, {
+            delay: 2.6,
+            y: 20,
+            opacity: 0,
+            ease: Expo.easeInOut
+            });
+
+         
+    </script>
+    
+</body>
+</html>
